@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Benefit Express" parallel="tests" thread-count="1" preserve-order="true"> 
+	 <parameter name="suiteExecuted" value="Regression" /> 
+	 <parameter name="executionType" value="Sequential"/> 
+	 <listeners> 
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners> 
+	<test name="Benefit Express Chrome">
+		<parameter name="execution_environment" value="local"/>
+		<parameter name="os_platform" value="Windows_7"/>
+		<parameter name="browser_platform" value="Chrome_45.0"/>
+		<parameter name="mobile_browsername" value="Chrome"/>
+		<parameter name="mobile_platform" value="Android"/>
+		<parameter name="mobile_device" value="Samsung Galaxy S5"/>
+
+		<classes>
+			<class name ="Regression.testsample"/>
+			<!-- <class name="com.scripts.web.v5scripts.TC_V5_ID1376_VerifyFSAGoalAmount"/> -->
+			<class name="com.scripts.web.v5scripts.TC_V5_US1100_VerifyHSAPanel"/>
+			
+		</classes>
+	</test>
+	
+</suite>
